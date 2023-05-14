@@ -3,9 +3,9 @@ package com.devskiller.selenium;
 public interface Executor {
 
 	void SetLoginAndClickNext(String login);
-	String OpenCodePageAndReturnCode();
+	String OpenCodePageAndReturnCode() throws InterruptedException;
 	void SetCodeAndClickNext(String code);
-	void FillMaskedPasswordAndClickLogin(String password);
+	void FillMaskedPasswordAndClickLogin(String password) throws InterruptedException;
 	String GetLoggedInText();
 
 	default String GetCodeToAssert(){

@@ -21,7 +21,7 @@ public class SeleniumExecutorTest extends BaseSeleniumTest {
         String code = executor.OpenCodePageAndReturnCode();
         executor.SetCodeAndClickNext(code);
         assertEquals(executor.GetCodeToAssert(), code);
-        
+
         // Page 3
         executor.FillMaskedPasswordAndClickLogin(PASSWORD);
         String text = executor.GetLoggedInText();
